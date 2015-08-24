@@ -1,0 +1,64 @@
+PERSONAL INFO
+
+	`profile`(
+		id int auto_increment,
+		username varchar(50) not null,
+		firstname varchar(50) not null,
+		lastname varchar(50) not null,
+		email varchar(100) not null,
+		gender varchar(10) not null,
+		maritalstatus varchar(50) not null,
+		birthday date not null,
+		cellphone varchar(50) not null,
+		location tinytext not null,
+		biography text not null,
+		profile_cv text not null,
+		status tinyint(2) not null,
+		joined date not null,
+		primary key(id)
+
+
+	identities
+		id
+		id_number
+		nssf_number
+		pin_number
+		pp_number
+	
+	status
+		gender
+		marital_status
+		nationality
+		dob
+	
+	contacts
+		home_address
+		alternate_address
+		phone
+		mobile
+		email
+	
+	positions
+		project
+		post
+		team_lead
+	
+	contracts
+		contract_reference
+		employee
+		job_title
+		wage
+		wage_type
+		contract_type
+	
+	durations
+		start_date
+		end_date
+		work_schedule
+		probation_start
+		probation_end
+		net_value
+		gross_value
+		notes
+	
+		
