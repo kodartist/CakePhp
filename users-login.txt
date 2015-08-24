@@ -1,0 +1,65 @@
+++++++++++View+++++++++++++
+<div class="form-horizontal-center" style="align">
+
+
+			<div class="form-group">
+					<?php echo $this->Session->flash('auth'); ?>
+					<?php echo $this->Form->create('User'); ?>
+
+						<fieldset>
+							<legend><?php echo __('Add User'); ?></legend>
+								<?php echo $this->Form->input('username'); ?>
+					   
+							   
+							  </div>
+							  
+							  <div class="form-group">
+							  
+								<?php echo $this->Form->input('password'); ?>
+							  
+							  </div>
+							  
+							  <div class="form-group">
+				  
+				  </fieldset>
+				
+				  <?php echo $this->Form->end(__('Login'), array('class' => 'btn btn-default')); ?>
+				
+				  </div>
+ </div>
+
+
+
+
+
+++++++++++++++end++++++++++++++
+
++++++++Controller++++++++++++++
+
+var $name = 'Users';
+	
+	
+	 public function beforeFilter() {
+		parent::beforeFilter();
+		// Allow users to register and logout.
+		$this->Auth->allow('add', 'logout','index');
+	}
+    
+    
+++++++++++++++++end +++++++++++++++++
+
+++++++++++++Model++++++++++++++++
+public function beforeSave($options = array()){
+		
+		if(isset($this->data['User']['password'])){
+		
+		$this->data['User']['password'] = AuthComponent::password($this->data['User']['password']);
+					
+		}
+					
+					return true;
+	}
+	 
+
+++++++++++++++++end+++++++++++
+
