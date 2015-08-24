@@ -1,0 +1,37 @@
+
+
+
+/*
+Add Model, Controller and database based on the Q1 - Qn
+*/
+
+<div class="personaldetails form">
+<?php echo $this->Form->create('Personaldetail'); ?>
+	<fieldset>
+		<legend><?php echo __('Add Personaldetail'); ?></legend>
+	<?php
+		echo $this->Form->input('user_id');
+		echo $this->Form->input('gender', array('label'=>'Gender','label'=>'Gender',array('M'=>'Male','F'=>'Female','type'=>'select')));
+		echo $this->Form->input('age');
+		echo $this->Form->input('users_dob');
+		echo $this->Form->input('pincode');
+		echo $this->Form->input('identity_code');
+		echo $this->Form->input('nssf');
+		echo $this->Form->input('nhif');
+		echo $this->Form->input('passport_num');
+		echo $this->Form->input('bank_account');
+		echo $this->Form->input('bank_name_branch');
+		echo $this->Form->input('bank_code');
+	?>
+	</fieldset>
+<?php echo $this->Form->end(__('Submit')); ?>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Personaldetails'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+	</ul>
+</div>
