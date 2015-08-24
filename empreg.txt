@@ -1,0 +1,17 @@
+Personal Information
+	id
+	name
+	national_id
+	dob
+	department
+	Section
+	Location
+	title
+	reports_to
+	joined_date
+	contract_period
+	Marital_status
+Contact Information
+Professional Information
+Emergency contact information
+Human Resource Information
